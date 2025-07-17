@@ -1,0 +1,17 @@
+<div class="home">
+  <div class="intro">
+    <img src="assets/images/PranavKewateImage.jpg" alt="Profile" class="profile-pic" />
+    
+    <h1>Hi, I'm <span>Pranav Kewate</span></h1>
+    <h2 id="typewriter"></h2>
+    <p>I specialize in building fast, secure, and scalable backend applications using the MEAN stack.</p>
+
+    <a href="../../../assets/doc/Pranav_Kewate_Nodejs_Resume.pdf" download>📄 Download Resume</a>
+
+    <button (click)="toggleDarkMode()" class="theme-toggle">
+      {{ isDarkMode ? '🌞 Light Mode' : '🌙 Dark Mode' }}
+    </button>
+  </div>
+
+  <app-skills [skills]="mySkills"></app-skills>
+</div>

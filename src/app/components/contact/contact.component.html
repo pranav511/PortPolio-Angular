@@ -1,0 +1,30 @@
+<section class="contact">
+  <h2>Contact Me</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label>
+      Name:
+      <input formControlName="name" placeholder="Your Name" />
+      <span *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+        Name is required (min 3 chars)
+      </span>
+    </label>
+
+    <label>
+      Email:
+      <input formControlName="email" placeholder="Your Email" />
+      <span *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+        Enter a valid email
+      </span>
+    </label>
+
+    <label>
+      Message:
+      <textarea formControlName="message" placeholder="Your Message"></textarea>
+      <span *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+        Message must be at least 10 characters
+      </span>
+    </label>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
