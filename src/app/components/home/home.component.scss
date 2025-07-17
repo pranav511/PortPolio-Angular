@@ -3,29 +3,9 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  min-height: 80vh;
-  transition: background-color 0.3s, color 0.3s;
-
-  &.dark-mode {
-    background-color: #121212;
-    color: #eee;
-
-    .profile-pic {
-      border-color: #64b5f6;
-    }
-
-    a, .toggle-btn {
-      background-color: #1565c0;
-    }
-
-    a:hover, .toggle-btn:hover {
-      background-color: #1976d2;
-    }
-  }
 
   .intro {
     text-align: center;
-    animation: fadeInUp 1.5s ease-in-out;
 
     .profile-pic {
       width: 150px;
@@ -34,26 +14,26 @@
       border-radius: 50%;
       border: 4px solid #0d47a1;
       margin-bottom: 1rem;
-      animation: fadeIn 1s ease-in-out;
+      animation: fadeIn 1.5s ease-in;
     }
 
     h1 {
-      font-size: 2.5rem;
       margin: 0.5rem 0;
       color: #0d47a1;
+    }
 
-      span {
-        color: #1976d2;
-      }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      min-height: 2rem;
     }
 
     p {
       max-width: 600px;
       margin: auto;
-      font-size: 1.1rem;
     }
 
-    a {
+    a, .theme-toggle {
       display: inline-block;
       margin-top: 1rem;
       background-color: #0d47a1;
@@ -61,35 +41,17 @@
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
       text-decoration: none;
-      transition: background-color 0.3s;
+      border: none;
+      cursor: pointer;
 
       &:hover {
         background-color: #1565c0;
       }
     }
 
-    .toggle-btn {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-      background-color: #0d47a1;
-      color: white;
-      transition: background-color 0.3s;
+    .theme-toggle {
+      margin-left: 1rem;
     }
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
